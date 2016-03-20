@@ -1,0 +1,3 @@
+[submodule "schedule-generator"]
+	path = schedule-generator
+	url = https://github.com/msrose/schedule-generator
