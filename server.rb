@@ -1,9 +1,18 @@
 require 'sinatra'
+require 'sinatra/cross_origin'
 require 'json'
 
 require_relative './schedule-generator/generator'
 
 global_config = JSON.parse(File.open('./config.json').read)
+
+configure do
+  enable :cross_origin
+end
+
+options '/' do
+  'All good'
+end
 
 post '/' do
   body = {}
