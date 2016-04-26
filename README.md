@@ -1,6 +1,6 @@
 # University of Waterloo Schedule Generator API
 
-# Developing
+## Developing
 
 ```
 git clone https://github.com/msrose/uw-schedule-api
@@ -12,9 +12,9 @@ ruby server.rb
 
 The server starts at http://localhost:4567
 
-# Documentation
+## Documentation
 
-## POST /
+### POST /
 
 Example request body:
 
@@ -23,7 +23,17 @@ Example request body:
 ```
 See the [schedule generator](https://github.com/msrose/schedule-generator) for a full explanation of the parameters.
 
-# Deploy to EC2
+### GET /search
+
+Gives course results (as an HTML table) from http://www.adm.uwaterloo.ca/infocour/CIR/SA/under.html.
+
+Example request:
+
+```
+GET /search?term=1165&subject=CS&cournum=360
+```
+
+## Deploy to EC2
 
 SSH into the instance and run
 
